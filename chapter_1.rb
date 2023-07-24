@@ -5,15 +5,15 @@
 
 require 'ripper'  #Ruby Tokenization tool
 require 'pp'
-snippet = <<STR
+# snippet = <<STR
 
-5.times.do |t|
-  puts t
-end
+# 5.times.do |t|
+#   puts t
+# end
 
-STR
+# STR
 
-pp Ripper.lex(snippet)
+# pp Ripper.lex(snippet)
 
 
 
@@ -22,4 +22,8 @@ pp Ripper.lex(snippet)
 
 #ruby -y chapter_1.rb shows the parsing state changes
 
+snippet = <<STR
+    4 + 2 * 3 
+STR
 pp Ripper.sexp(snippet)
+ruby --dump parsetree chapter_1.rb  #ruby AST with nodes
