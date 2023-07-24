@@ -14,3 +14,12 @@ end
 STR
 
 pp Ripper.lex(snippet)
+
+
+
+# Parsing and Tokenization occur simultaneously
+# Ruby uses a Bisoon Parser
+
+#ruby -y chapter_1.rb shows the parsing state changes
+
+pp Ripper.sexp(snippet)
