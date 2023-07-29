@@ -26,14 +26,22 @@ class Sedan < Car
     end
 end
 
-p Sedan.type
-p Car.type
+puts Sedan.type
+puts Car.type
 
-p Sedan.wheel_count
-p Car.wheel_count
+puts Sedan.wheel_count
+puts Car.wheel_count
 
 #count all instances of classes that exist in sessions
 ObjectSpace.count_objects[:T_CLASS]
 
+Sedan.singleton_class #get the metaclass
 #Ruby creates a hidden metaclass that accepts class level methods i.e self. methods
 
+
+str = 'Fh Ndiritu'
+str.instance_variable_set('@label_1', 'first_name')
+str.instance_variable_set('@label_2', 'last_name')
+str.instance_variables
+
+#Output [:@label_2, :@label_1]
