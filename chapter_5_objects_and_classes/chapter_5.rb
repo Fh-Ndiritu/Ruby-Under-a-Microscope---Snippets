@@ -32,4 +32,8 @@ p Car.type
 p Sedan.wheel_count
 p Car.wheel_count
 
+#count all instances of classes that exist in sessions
+ObjectSpace.count_objects[:T_CLASS]
+
+#Ruby creates a hidden metaclass that accepts class level methods i.e self. methods
 
