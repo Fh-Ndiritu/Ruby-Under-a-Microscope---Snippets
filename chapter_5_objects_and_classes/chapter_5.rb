@@ -1,7 +1,6 @@
 class Car
-    @type = 'Electric'
-
-    @@wheel_count = 4
+    @type = 'Electric' #class instance variable
+    @@wheel_count = 4 #class variable
 
     def self.type
         @type
@@ -33,10 +32,14 @@ puts Sedan.wheel_count
 puts Car.wheel_count
 
 #count all instances of classes that exist in sessions
-ObjectSpace.count_objects[:T_CLASS]
+ObjectSpace.count_objects[:T_CLASS] #X classes exist
+class Plane 
+    
+end
+ObjectSpace.count_objects[:T_CLASS] #X + 2 classes exist
+Plane.singleton_class #get the metaclass
 
-Sedan.singleton_class #get the metaclass
-#Ruby creates a hidden metaclass that accepts class level methods i.e self. methods
+#Ruby creates a hidden metaclass that stores class level methods i.e self. methods
 
 
 str = 'Fh Ndiritu'
