@@ -26,6 +26,8 @@
 # end
 
 
+
+# FIRST CLASS CITIZENS
 def sun_rise
     str = "The sun rises"
 
@@ -37,3 +39,9 @@ end
 function_value = sun_rise
 
 function_value.call('day')
+
+
+#procs are objects
+#lambdas are implemented as procs with an is_lambda flag
+#lambdas care about arguments while procs will execute normally
+#lambdas will return from themselves while procs will return from the current method
